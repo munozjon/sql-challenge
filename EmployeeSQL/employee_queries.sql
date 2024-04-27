@@ -32,4 +32,19 @@ LEFT JOIN employees AS e ON (e.emp_no = d_e.emp_no)
 LEFT JOIN departments AS d ON (d.dept_no = d_e.dept_no)
 WHERE d.dept_name = 'Sales';
 
+-- Question 7
+SELECT e.emp_no, e.last_name, e.first_name, d.dept_name
+FROM dept_emp AS d_e
+LEFT JOIN employees AS e ON (e.emp_no = d_e.emp_no)
+LEFT JOIN departments AS d ON (d.dept_no = d_e.dept_no)
+WHERE d.dept_name = 'Sales' OR d.dept_name = 'Development';
+
+-- Question 8
+SELECT e.last_name, COUNT(e.last_name) AS frequency
+FROM employees AS e
+GROUP BY e.last_name
+ORDER BY frequency DESC;
+
+
+
 
