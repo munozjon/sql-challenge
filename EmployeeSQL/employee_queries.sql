@@ -44,7 +44,3 @@ SELECT e.last_name, COUNT(e.last_name) AS frequency
 FROM employees AS e
 GROUP BY e.last_name
 ORDER BY frequency DESC;
-
-
-
-
