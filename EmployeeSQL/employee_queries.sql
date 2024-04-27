@@ -19,3 +19,17 @@ SELECT d.dept_no, e.emp_no, e.last_name, e.first_name, d.dept_name
 FROM dept_emp AS d_e
 LEFT JOIN employees AS e ON (e.emp_no = d_e.emp_no)
 LEFT JOIN departments AS d ON (d.dept_no = d_e.dept_no);
+
+-- Question 5
+SELECT e.first_name, e.last_name, e.sex
+FROM employees AS e
+WHERE e.first_name = 'Hercules' AND e.last_name LIKE 'B%';
+
+-- Question 6
+SELECT e.emp_no, e.last_name, e.first_name
+FROM dept_emp AS d_e
+LEFT JOIN employees AS e ON (e.emp_no = d_e.emp_no)
+LEFT JOIN departments AS d ON (d.dept_no = d_e.dept_no)
+WHERE d.dept_name = 'Sales';
+
+
