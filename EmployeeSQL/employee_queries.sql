@@ -1,7 +1,7 @@
 -- Question 1
 SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
 FROM employees AS e
-LEFT JOIN salaries AS S ON s.emp_no = e.emp_no;
+LEFT JOIN salaries AS s ON s.emp_no = e.emp_no;
 
 -- Question 2
 SELECT first_name, last_name, hire_date
